@@ -1,0 +1,72 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Code+Pro';
+html {
+  height: 100%; }
+
+body {
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%; }
+
+.circle-container {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  position: relative; }
+  .circle-container .left,
+  .circle-container .right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: -webkit-transform 100ms linear;
+    transition: transform 100ms linear;
+    transition: transform 100ms linear, -webkit-transform 100ms linear;
+    -webkit-transform-origin: center center;
+    transform-origin: center center; }
+  .circle-container .left {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: repeating-linear-gradient(0, #262626, #262626 2px, transparent 2px, transparent 6px); }
+  .circle-container .right {
+    background: repeating-linear-gradient(0, #262626, #262626 2px, transparent 2px, transparent 6px); }
+  .circle-container .held {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 50% 0 0 50%;
+    transition: -webkit-transform 100ms linear;
+    transition: transform 100ms linear;
+    transition: transform 100ms linear, -webkit-transform 100ms linear;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    background: white !important; }
+    .circle-container .held-left {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background: repeating-linear-gradient(0, #262626, #262626 2px, transparent 2px, transparent 6px); }
+    .circle-container .held-right {
+      background: repeating-linear-gradient(0, #262626, #262626 2px, transparent 2px, transparent 6px); }
+  .circle-container .label {
+    position: absolute;
+    top: 55%;
+    left: -5%;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    letter-spacing: 15px;
+    font-size: 40px; }
